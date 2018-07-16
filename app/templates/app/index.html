@@ -4,11 +4,22 @@
   <title>Task Manager</title>
 </head>
 <body>
-  <ul>
+  <!-- <form action="">
     {% for ob in obj %}
-      <li>{{ ob.action }}</li>
-      <li>{{ ob.priority }}</li>
+      <input type="radio" name="task" value="{{ ob.id }}"> {{ ob.action }} <br>
     {% endfor %}
-  </ul>
+  </form> -->
+  <table>
+    <tr>
+      <td>TASK</td>
+      <td>PRIORITY</td>
+    </tr>
+    {% for ob in obj %}
+        <tr>
+          <td>{{ ob.action }}</td>
+          <td>{{ ob.priority }}</td>
+        </tr>
+    {% endfor %}
+  </table>
 </body>
 </html>
